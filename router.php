@@ -3,7 +3,7 @@ session_start();
 global $mysqli;
 $mysqli = new mysqli("h5x.h.filess.io", "projects_realbetter", "ab1afdab23a24b01c0f2edf72b65e8008605e5e9", "projects_realbetter", "3307");
 require_once './Clients.php';
-$path = explode('/', $_SERVER['REQUEST_URI'])[2];
+$path = explode('/', $_SERVER['REQUEST_URI'])[1];
 $pathArr = explode('/', $_SERVER['REQUEST_URI']);
 $title = "";
 $visible = "";
@@ -36,10 +36,10 @@ if(isset($_SESSION['verefication'])){
         $visibleTitle = false;
         $visible = "d-none";
         $content = file_get_contents('./addClient.html');
-    } elseif ($pathArr[2] == "delete") {
-        exit(Clients::deleteClient($pathArr[3]));
-    } elseif ($pathArr[2] == "editClient") {
-        exit(Clients::editClient($pathArr[3]));
+    } elseif ($pathArr[1] == "delete") {
+        exit(Clients::deleteClient($pathArr[2]));
+    } elseif ($pathArr[1] == "editClient") {
+        exit(Clients::editClient($pathArr[2]));
     } elseif ($path == "addClient" and $_SERVER['REQUEST_METHOD'] == "POST") {
         exit(Clients::addClient());
     }
