@@ -13,7 +13,7 @@ $addact = "";
 $visibleTitle = true;
 if ($path == "_unlock"){
     $_SESSION['verefication'] = 3;
-    header("Location: /nameGym/clients");
+    header("Location: /clients");
 }
 if(isset($_SESSION['verefication'])){
     if ($path == "clients" or $path == "" or $path == "index.php") {
