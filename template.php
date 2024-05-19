@@ -51,7 +51,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item pos-left--5px row <?= $clientact ?>">
                 <div class="col-2" style="background-color: #FF7C50; border-radius: 0 5px 5px 0"></div>
-                <a class="nav-link col-17" href="/nameGym/clients">
+                <a class="nav-link col-17" href="/clients">
                     <i class="fa fa-users" aria-hidden="true"></i>
                     <span>Клиенты</span></a>
             </li>
@@ -59,14 +59,14 @@
             <!-- Nav Item - Charts -->
             <li class="nav-item pos-left--5px row <?= $addact ?>">
                 <div class="col-2" style="background-color: #FF7C50; border-radius: 0 5px 5px 0"></div>
-                <a class="nav-link col-17" href="/nameGym/addClient">
+                <a class="nav-link col-17" href="/addClient">
                     <i class="fa fa-address-card" aria-hidden="true"></i>
                     <span>Добавить</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a style="width: 10rem;" class="nav-link" href="/nameGym/lock">
+                <a style="width: 10rem;" class="nav-link" href="/lock">
                     <i class="fa fa-lock" aria-hidden="true"></i>
                     <span>Заблокировать</span></a>
             </li>
