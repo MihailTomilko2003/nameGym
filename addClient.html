@@ -1,0 +1,35 @@
+
+    <div class="card m-4" style="    position: relative;
+    top: 20px;">
+        <form class="row" action="/nameGym/addClient" method="post">
+            <input type="date" name="startDate" id="dateStart" style="display: none;">
+            <div class="col-10 d-flex border-right p-5" style="flex-direction: column;">
+                <div class="d-flex" style="flex-direction: column;">
+                    <label for="rate" style="color: #6D4133;" class="form-label iR h6">Название абонемента</label>
+                    <input required id="rate" type="text" class="form-control border-1 small mb-4 pl-brown" style="background-color: #FCF7F5; color: #6D4133; border-color: #f1ddd5;" name="rate" placeholder="Индивидуальные занятия..." >
+                </div>
+                <div class="d-flex" style="flex-direction: column;">
+                    <label for="date" style="color: #6D4133;" class="form-label iR h6">Дата окончания абонемента</label>
+                    <input required type="date" class="form-control border-1 small mb-4" style="background-color: #FCF7F5; color: #6D4133; border-color: #f1ddd5;" name="endDate" id="date">
+                </div>
+                <div class="d-flex mt-auto" style="flex-direction: column;">
+                    <input type="submit" class="btn btn-addClient iM w-100 p-2 " value="Добавить человека">
+                </div>
+            </div>
+            <div class="col-10 p-5 ">
+                <label for="rate" style="color: #6D4133;" class="form-label iR h6">Имя</label>
+                <input required id="rate" type="text" class="form-control border-1 small mb-4 pl-brown" style="background-color: #FCF7F5; color: #6D4133; border-color: #f1ddd5;" name="name" placeholder="Иван..." >
+
+                <label for="rate" style="color: #6D4133;" class="form-label iR h6">Фамилия</label>
+                <input required id="rate" type="text" class="form-control border-1 small mb-4 pl-brown" style="background-color: #FCF7F5; color: #6D4133; border-color: #f1ddd5;" name="lastname" placeholder="Иванов..." >
+
+                <label for="rate" style="color: #6D4133;" class="form-label iR h6">Отчество</label>
+                <input id="rate" type="text" class="form-control border-1 small pl-brown" style="background-color: #FCF7F5; color: #6D4133; border-color: #f1ddd5;" name="surname" placeholder="Иванович..." >
+            </div>
+        </form>
+    </div>
+    <script>
+        let now = new Date().toISOString().slice(0, 10)
+        document.getElementById('date').value = now
+        document.getElementById('dateStart').value = now
+    </script>
