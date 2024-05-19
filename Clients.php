@@ -3,7 +3,7 @@ class Clients {
     public static function getClients(){
         global $mysqli;
         $client = [];
-        $result = $mysqli->query("SELECT * FROM clients");
+        $result = $mysqli->query("SELECT * FROM clientsNameGym");
         while (($row = $result->fetch_assoc()) != NULL){
             $client[] = $row;
         }
@@ -12,14 +12,14 @@ class Clients {
     public static function deleteClient($id){
         global $mysqli;
         $id = (int)$id;
-        $mysqli->query("DELETE FROM `clients` WHERE `id` = $id");
+        $mysqli->query("DELETE FROM `clientsNameGym` WHERE `id` = $id");
         header("Location: /nameGym/clients");
     }
     public static function editClient($id){
         global $mysqli;
         $new_rate = $_POST['newRate'];
         $new_date = $_POST['newDate'];
-        $mysqli->query("UPDATE `clients` SET `rate`='$new_rate', `end` = '$new_date' WHERE `id` = $id");
+        $mysqli->query("UPDATE `clientsNameGym` SET `rate`='$new_rate', `end` = '$new_date' WHERE `id` = $id");
         header("Location: /nameGym/clients");
     }
     public static function addClient(){
@@ -30,7 +30,7 @@ class Clients {
         $name = $_POST['name'];
         $lastname = $_POST['lastname'];
         $surname = $_POST['surname'];
-        $mysqli->query("INSERT INTO `clients` (`name`, `lastname`, `surname`, `rate`, `start`, `end`) VALUES ('$name', '$lastname', '$surname', '$rate', '$startDate', '$endDate');");
+        $mysqli->query("INSERT INTO `clientsNameGym` (`name`, `lastname`, `surname`, `rate`, `start`, `end`) VALUES ('$name', '$lastname', '$surname', '$rate', '$startDate', '$endDate');");
         header("Location: /nameGym/clients");
     }
 }
