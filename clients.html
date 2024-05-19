@@ -307,7 +307,7 @@
       let newDate = document.getElementById("newDate");
       newDate.value = dateEnd;
       inputrate.value = rate;
-      formurl.action = "/nameGym/editClient/" + id;
+      formurl.action = "/editClient/" + id;
     }
     function normalDate(date) {
       return (
@@ -344,7 +344,7 @@
     let now = new Date().toISOString().slice(0, 10);
     var today = new Date(now);
 
-    fetch("/nameGym/getClients")
+    fetch("/getClients")
       .then(function (response) {
         return response.json();
       })
