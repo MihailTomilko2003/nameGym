@@ -1,4 +1,4 @@
-# powerGym
+# powerGym, pass - 123
 -----------EN-------------
 
 A dashboard for the gym. It makes it possible to register and track customers. A system lock function is also provided. It may be required in cases where the administrator is absent from his workplace. For example, so that the client cannot renew the subscription himself. The project is planned to be used from a local server, without hosting. It is not intended for general use, which is why the layout is tailored to a specific monitor.
