@@ -1,7 +1,7 @@
 <?php
 session_start();
 global $mysqli;
-$mysqli = new mysqli("127.0.0.1", "root", "root", "powerGym", "8889");
+$mysqli = new mysqli("h5x.h.filess.io", "projects_realbetter", "ab1afdab23a24b01c0f2edf72b65e8008605e5e9", "projects_realbetter", "3307");
 require_once './Clients.php';
 $path = explode('/', $_SERVER['REQUEST_URI'])[2];
 $pathArr = explode('/', $_SERVER['REQUEST_URI']);
