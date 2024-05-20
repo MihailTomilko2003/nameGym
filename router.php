@@ -11,6 +11,7 @@ $content = "404";
 $clientact = "";
 $addact = "";
 $visibleTitle = true;
+echo $path;
 if ($path == "_unlock"){
     $_SESSION['verefication'] = 3;
     header("Location: /nameGym/clients");
